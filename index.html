@@ -7,9 +7,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/JSXTransformer.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <style>
+    textarea, pre{height: 1000px !important;}
+  </style>
 </head>
 <body>
   <div id="content"></div>
-  <script type="text/jsx;harmony=true" src="js/app.js"></script>
+  <script type="text/jsx" src="Transformer.js"></script>
+
+  <script type="text/jsx">
+    /** @jsx React.DOM */
+    React.render(<Transformer />, document.getElementById('content'))
+  </script>
 </body>
 </html>
